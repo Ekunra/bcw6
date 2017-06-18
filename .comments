@@ -1,0 +1,16 @@
+1. Repository Server: https://github.com
+2. Cloud Hosting: https://www.digitalocean.com
+3. Domain Names Registrant: https://www.dynadot.com
+4. SSL Sertificate Authority: https://gogetssl.com
+5. NS Settings: https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars
+6. PIP Documentation: https://pip.pypa.io/en/stable/
+7. Python documentation: https://www.python.org/
+8. Redis commands: https://redis.io/commands
+9. Redis tutorial: http://try.redis.io/
+10. Python redis: https://pypi.python.org/pypi/redis
+11. PostgreSQL: https://www.postgresql.org
+12. Django: https://www.djangoproject.com/
+13. Django poll tutorial: https://docs.djangoproject.com/en/1.11/intro/tutorial01/
+14. Django jinja: http://niwinz.github.io/django-jinja/latest/
+15. Bootstrap: http://getbootstrap.com/
+16. Read about CSRF, XSS, clickjacking, html-injections, SybolProblem
