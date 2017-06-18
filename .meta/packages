@@ -1,6 +1,7 @@
-Django
-psycopg2
-Jinja2
-ujson
-ipython
-ipdb
+Django==1.11.2
+ipdb==0.10.3
+ipython==5.4.1
+Jinja2==2.9.6
+psycopg2==2.7.1
+ujson==1.35
+
