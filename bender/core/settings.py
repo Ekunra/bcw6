@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # build-in packages
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # third party packages
+    'django_jinja',
+
+    # applications
     'core',
     'tasks'
 ]
@@ -56,6 +61,37 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
+    {
+        "BACKEND": "django_jinja.backend.Jinja2",
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "match_extension": ".tpl",
+            "context_processors": [
+                "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.debug",
+                "django.template.context_processors.i18n",
+                "django.template.context_processors.media",
+                "django.template.context_processors.static",
+                "django.template.context_processors.tz",
+                "django.contrib.messages.context_processors.messages",
+            ],
+            "extensions": [
+                "jinja2.ext.do",
+                "jinja2.ext.loopcontrols",
+                "jinja2.ext.with_",
+                "jinja2.ext.i18n",
+                "jinja2.ext.autoescape",
+                "django_jinja.builtins.extensions.CsrfExtension",
+                "django_jinja.builtins.extensions.TimezoneExtension",
+                "django_jinja.builtins.extensions.UrlsExtension",
+                "django_jinja.builtins.extensions.StaticFilesExtension",
+                "django_jinja.builtins.extensions.DjangoFiltersExtension",
+            ],
+            "autoescape": True,
+            "auto_reload": DEBUG,
+            "translation_engine": "django.utils.translation"
+        }
+    },
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
@@ -83,6 +119,11 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# Auth
+
+LOGIN_URL = '/login/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Password validation

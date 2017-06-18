@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+from core import views
 
-from django.shortcuts import render
 
-# Create your views here.
+class IndexView(views.BaseTemplatedView):
+    template_name = 'tasks/index.tpl'
